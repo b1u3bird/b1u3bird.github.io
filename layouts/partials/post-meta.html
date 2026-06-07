@@ -1,0 +1,6 @@
+{{ $meta := slice }}
+{{ with partial "post-category.html" . }}{{ $meta = $meta | append . }}{{ end }}
+{{ with .Params.tags }}{{ $meta = $meta | append (delimit . " / ") }}{{ end }}
+{{ $meta = $meta | append (printf "%d words" .WordCount) }}
+{{ $meta = $meta | append (.Date.Format "2006/01/02") }}
+{{ delimit $meta " · " }}

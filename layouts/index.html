@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <section id="index" class="archive-panel" aria-labelledby="archive-title">
+    <h2 id="archive-title" class="visually-hidden">文章归档</h2>
+    <div class="table-scroll" role="region" aria-label="文章列表" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th>title</th>
+            <th>categories</th>
+            <th>tags</th>
+            <th>series</th>
+            <th>words</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range where .Site.RegularPages.ByDate.Reverse "Section" "posts" }}
+            {{ $category := partial "post-category.html" . }}
+            <tr>
+              <td><a href="{{ .RelPermalink }}">{{ .Title }}</a></td>
+              <td>
+                {{ with $category }}<span>{{ . }}</span>{{ end }}
+              </td>
+              <td>
+                {{ range .Params.tags }}<a href="{{ printf "/tags/%s/" (. | urlize) | relURL }}">{{ . }}</a>{{ end }}
+              </td>
+              <td>
+                {{ range .Params.series }}<a href="{{ printf "/series/%s/" (. | urlize) | relURL }}">{{ . }}</a>{{ end }}
+              </td>
+              <td>{{ .WordCount }}</td>
+              <td>{{ .Date.Format "2006/01/02" }}</td>
+            </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{{ end }}

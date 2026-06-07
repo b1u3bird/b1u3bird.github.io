@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    {{ with .OutputFormats.Get "rss" }}
+      <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ $.Site.Title }}" />
+    {{ end }}
+    <link rel="stylesheet" href="{{ "styles.css" | relURL }}?v=20260607-code-font" />
+  </head>
+  <body>
+    <header class="site-header index">
+      <h1 class="brand"><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
+      <nav class="nav" aria-label="主导航">
+        {{ $current := . }}
+        {{ range .Site.Menus.main }}
+          {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+          <a href="{{ .URL | relURL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <script src="{{ "script.js" | relURL }}"></script>
+  </body>
+</html>

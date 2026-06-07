@@ -1,0 +1,44 @@
+baseURL = "https://example.com/"
+locale = "zh-cn"
+title = "bluebird"
+
+[params]
+  description = "A Hugo blog styled after a compact technical archive."
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = "github-dark"
+
+[menu]
+  [[menu.main]]
+    name = "categories"
+    url = "/categories/"
+    weight = 10
+  [[menu.main]]
+    name = "tags"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    name = "series"
+    url = "/series/"
+    weight = 30
+  [[menu.main]]
+    name = "about"
+    url = "/about/"
+    weight = 40
+  [[menu.main]]
+    name = "rss"
+    url = "/index.xml"
+    weight = 50
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"

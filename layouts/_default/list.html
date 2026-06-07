@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="archive-panel list-page">
+    <h1>{{ .Title }}</h1>
+    <ul class="term-list">
+      {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a><span>{{ .Date.Format "2006/01/02" }}</span></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

@@ -1,0 +1,8 @@
+{{- $path := replace .File.Dir "\\" "/" -}}
+{{- $path = strings.TrimPrefix "posts/" $path -}}
+{{- $path = strings.TrimSuffix "/" $path -}}
+{{- if $path -}}
+  {{- $path -}}
+{{- else -}}
+  {{- with .Params.categories -}}{{- index . 0 -}}{{- end -}}
+{{- end -}}

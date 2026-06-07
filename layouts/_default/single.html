@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <div class="article-layout">
+    {{ if .TableOfContents }}
+      <aside class="toc-container" aria-label="文章目录">
+        <strong>目录</strong>
+        {{ .TableOfContents }}
+      </aside>
+    {{ end }}
+
+    <article id="article" class="post-card">
+      <header id="title" class="post-title">
+        <h1>{{ .Title }}</h1>
+        <span>{{ partial "post-meta.html" . }}</span>
+      </header>
+
+      <div class="post-content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+{{ end }}
