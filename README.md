@@ -46,6 +46,16 @@ Remove-Item -Recurse -Force "D:\Code\website\public"
 hugo --source "D:\Code\website" --destination "D:\Code\website\public"
 ```
 
+## 部署
+
+这个仓库配置为 GitHub Pages 用户主页站点，线上地址是：
+
+```text
+https://b1u3bird.github.io/
+```
+
+推送到 `main` 后，GitHub Actions 会自动构建 Hugo 并部署到 Pages。仓库设置里需要把 Pages 的 Source 设为 `GitHub Actions`。
+
 ## RSS
 
 RSS 会由 Hugo 自动生成，主页订阅地址是：
