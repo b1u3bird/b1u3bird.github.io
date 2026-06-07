@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Claude on bluebird</title>
-		<link>http://localhost:1313/tags/claude/</link>
+		<link>https://b1u3bird.github.io/tags/claude/</link>
 		<description>Recent content in Claude on bluebird</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/claude/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://b1u3bird.github.io/tags/claude/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>claude.md</title>
-				<link>http://localhost:1313/posts/tools/claude/</link>
+				<link>https://b1u3bird.github.io/posts/tools/claude/</link>
 				<pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/tools/claude/</guid>
+				<guid>https://b1u3bird.github.io/posts/tools/claude/</guid>
 				<description>&lt;h1 id=&#34;claudemd&#34;&gt;CLAUDE.md&lt;/h1&gt;&#xA;&lt;p&gt;Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tradeoff:&lt;/strong&gt; These guidelines bias toward caution over speed. For trivial tasks, use judgment.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-think-before-coding&#34;&gt;1. Think Before Coding&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Don&amp;rsquo;t assume. Don&amp;rsquo;t hide confusion. Surface tradeoffs.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before implementing:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;State your assumptions explicitly. If uncertain, ask.&lt;/li&gt;&#xA;&lt;li&gt;If multiple interpretations exist, present them - don&amp;rsquo;t pick silently.&lt;/li&gt;&#xA;&lt;li&gt;If a simpler approach exists, say so. Push back when warranted.&lt;/li&gt;&#xA;&lt;li&gt;If something is unclear, stop. Name what&amp;rsquo;s confusing. Ask.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-simplicity-first&#34;&gt;2. Simplicity First&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Minimum code that solves the problem. Nothing speculative.&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 	</channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Clangd on bluebird</title>
-		<link>http://localhost:1313/tags/clangd/</link>
+		<link>https://b1u3bird.github.io/tags/clangd/</link>
 		<description>Recent content in Clangd on bluebird</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 27 Jan 2026 09:00:00 +0800</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/clangd/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://b1u3bird.github.io/tags/clangd/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Windows 下的 clangd 配置记录</title>
-				<link>http://localhost:1313/posts/tools/clangd-windows/</link>
+				<link>https://b1u3bird.github.io/posts/tools/clangd-windows/</link>
 				<pubDate>Tue, 27 Jan 2026 09:00:00 +0800</pubDate>
-				<guid>http://localhost:1313/posts/tools/clangd-windows/</guid>
+				<guid>https://b1u3bird.github.io/posts/tools/clangd-windows/</guid>
 				<description>&lt;p&gt;Windows 下配置 clangd 的关键是让编译参数和 include 路径稳定可复现。对于单文件算法竞赛项目，&lt;code&gt;compile_flags.txt&lt;/code&gt; 通常比完整 CMake 更直接。&lt;/p&gt;&#xA;&lt;h2 id=&#34;参数&#34;&gt;参数&lt;/h2&gt;&#xA;&lt;p&gt;保留标准版本、警告开关和 MinGW include 路径即可覆盖大多数补全场景。&lt;/p&gt;</description>
 			</item>
 	</channel>

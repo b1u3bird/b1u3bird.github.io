@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Db Internals on bluebird</title>
-		<link>http://localhost:1313/series/db-internals/</link>
+		<link>https://b1u3bird.github.io/series/db-internals/</link>
 		<description>Recent content in Db Internals on bluebird</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Fri, 22 May 2026 09:00:00 +0800</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/series/db-internals/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://b1u3bird.github.io/series/db-internals/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Redis listpack 的紧凑编码观察</title>
-				<link>http://localhost:1313/posts/dev/db/redis-listpack/</link>
+				<link>https://b1u3bird.github.io/posts/dev/db/redis-listpack/</link>
 				<pubDate>Fri, 22 May 2026 09:00:00 +0800</pubDate>
-				<guid>http://localhost:1313/posts/dev/db/redis-listpack/</guid>
+				<guid>https://b1u3bird.github.io/posts/dev/db/redis-listpack/</guid>
 				<description>&lt;p&gt;listpack 的目标是用连续内存降低小对象集合的额外开销。它适合写成短笔记：先描述编码格式，再观察边界条件，最后记录调试命令。&lt;/p&gt;&#xA;&lt;h2 id=&#34;编码&#34;&gt;编码&lt;/h2&gt;&#xA;&lt;p&gt;每个元素携带长度信息，遍历时可以顺序前进，也能根据尾部长度信息向后移动。&lt;/p&gt;&#xA;&lt;h2 id=&#34;取舍&#34;&gt;取舍&lt;/h2&gt;&#xA;&lt;p&gt;紧凑布局提升缓存局部性，但插入和删除可能触发内存搬移，因此适合小集合场景。&lt;/p&gt;</description>
 			</item>
 	</channel>

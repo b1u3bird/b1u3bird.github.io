@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Posts on bluebird</title>
-		<link>http://localhost:1313/posts/</link>
+		<link>https://b1u3bird.github.io/posts/</link>
 		<description>Recent content in Posts on bluebird</description>
 		<generator>Hugo</generator>
 		<language>zh-cn</language>
@@ -12,33 +12,33 @@
 		
 			<lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://b1u3bird.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>claude.md</title>
-				<link>http://localhost:1313/posts/tools/claude/</link>
+				<link>https://b1u3bird.github.io/posts/tools/claude/</link>
 				<pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/tools/claude/</guid>
+				<guid>https://b1u3bird.github.io/posts/tools/claude/</guid>
 				<description>&lt;h1 id=&#34;claudemd&#34;&gt;CLAUDE.md&lt;/h1&gt;&#xA;&lt;p&gt;Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tradeoff:&lt;/strong&gt; These guidelines bias toward caution over speed. For trivial tasks, use judgment.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-think-before-coding&#34;&gt;1. Think Before Coding&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Don&amp;rsquo;t assume. Don&amp;rsquo;t hide confusion. Surface tradeoffs.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Before implementing:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;State your assumptions explicitly. If uncertain, ask.&lt;/li&gt;&#xA;&lt;li&gt;If multiple interpretations exist, present them - don&amp;rsquo;t pick silently.&lt;/li&gt;&#xA;&lt;li&gt;If a simpler approach exists, say so. Push back when warranted.&lt;/li&gt;&#xA;&lt;li&gt;If something is unclear, stop. Name what&amp;rsquo;s confusing. Ask.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-simplicity-first&#34;&gt;2. Simplicity First&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Minimum code that solves the problem. Nothing speculative.&lt;/strong&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Java 内存模型里的可见性边界</title>
-				<link>http://localhost:1313/posts/dev/java-memory-model/</link>
+				<link>https://b1u3bird.github.io/posts/dev/java-memory-model/</link>
 				<pubDate>Mon, 01 Jun 2026 09:00:00 +0800</pubDate>
-				<guid>http://localhost:1313/posts/dev/java-memory-model/</guid>
+				<guid>https://b1u3bird.github.io/posts/dev/java-memory-model/</guid>
 				<description>&lt;p&gt;这是一篇用于展示 Hugo 生成效果的示例文章。页面保留技术博客的阅读密度：标题用色带区分层级，正文留白克制，代码块使用暗色语法区域，目录固定在左侧。&lt;/p&gt;&#xA;&lt;h1 id=&#34;背景&#34;&gt;背景&lt;/h1&gt;&#xA;&lt;p&gt;当多个线程读写同一份状态时，真正需要关注的不只是变量本身，还有写入何时对另一个线程可见。这个问题通常落在编译器优化、CPU 缓存和语言内存模型之间。&lt;/p&gt;&#xA;&lt;h2 id=&#34;模型&#34;&gt;模型&lt;/h2&gt;&#xA;&lt;p&gt;一个实用的判断方式是先找到同步边界：锁释放到锁获取、volatile 写到 volatile 读、线程启动和线程结束等。边界之外的数据传播不能靠直觉保证。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;技术博客的排版重点不是装饰感，而是让长标题、代码、引用和表格在同一页里仍然容易扫描。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;代码&#34;&gt;代码&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Counter&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;volatile&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;&#xA;&lt;p&gt;这个 Hugo 版本会把 &lt;code&gt;content/posts&lt;/code&gt; 下的 Markdown 自动生成到首页归档表格里，后续只需要继续添加文章即可。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Redis listpack 的紧凑编码观察</title>
-				<link>http://localhost:1313/posts/dev/db/redis-listpack/</link>
+				<link>https://b1u3bird.github.io/posts/dev/db/redis-listpack/</link>
 				<pubDate>Fri, 22 May 2026 09:00:00 +0800</pubDate>
-				<guid>http://localhost:1313/posts/dev/db/redis-listpack/</guid>
+				<guid>https://b1u3bird.github.io/posts/dev/db/redis-listpack/</guid>
 				<description>&lt;p&gt;listpack 的目标是用连续内存降低小对象集合的额外开销。它适合写成短笔记：先描述编码格式，再观察边界条件，最后记录调试命令。&lt;/p&gt;&#xA;&lt;h2 id=&#34;编码&#34;&gt;编码&lt;/h2&gt;&#xA;&lt;p&gt;每个元素携带长度信息，遍历时可以顺序前进，也能根据尾部长度信息向后移动。&lt;/p&gt;&#xA;&lt;h2 id=&#34;取舍&#34;&gt;取舍&lt;/h2&gt;&#xA;&lt;p&gt;紧凑布局提升缓存局部性，但插入和删除可能触发内存搬移，因此适合小集合场景。&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Windows 下的 clangd 配置记录</title>
-				<link>http://localhost:1313/posts/tools/clangd-windows/</link>
+				<link>https://b1u3bird.github.io/posts/tools/clangd-windows/</link>
 				<pubDate>Tue, 27 Jan 2026 09:00:00 +0800</pubDate>
-				<guid>http://localhost:1313/posts/tools/clangd-windows/</guid>
+				<guid>https://b1u3bird.github.io/posts/tools/clangd-windows/</guid>
 				<description>&lt;p&gt;Windows 下配置 clangd 的关键是让编译参数和 include 路径稳定可复现。对于单文件算法竞赛项目，&lt;code&gt;compile_flags.txt&lt;/code&gt; 通常比完整 CMake 更直接。&lt;/p&gt;&#xA;&lt;h2 id=&#34;参数&#34;&gt;参数&lt;/h2&gt;&#xA;&lt;p&gt;保留标准版本、警告开关和 MinGW include 路径即可覆盖大多数补全场景。&lt;/p&gt;</description>
 			</item>
 	</channel>
